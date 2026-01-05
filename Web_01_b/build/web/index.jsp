@@ -51,7 +51,7 @@
             <br>
             <input type="submit" name="txtB" value="Submit Query">
             <input type="submit" value="Register" name="action">
-            <input type="reset" name="txtB">
+            <input type="Reset" name="txtB">
             <input type="button" value="JavaScript" name="txtB" onclick="">
         </form>
     </body>
