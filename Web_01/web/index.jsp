@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <<h2>Lê Hoàng Khang</h2>>
+        <<h2>Le Hoang Khang</h2>>
     </body>
 </html>
