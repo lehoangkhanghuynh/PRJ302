@@ -39,7 +39,7 @@ public class MainController extends HttpServlet {
             out.println("<body>");
             
             try {
-               String username = request.getParameter("UserName");
+            String username = request.getParameter("UserName");
             String password = request.getParameter("PassWord");
             if (username.equals("admin") && password.equals("admin")) {
                 out.print("login success");
