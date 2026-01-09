@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="Description" content="Khóa học coursera trường đại học fptu"
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Khóa Học FPTU</title>
         <style>
@@ -102,10 +103,16 @@
                 opacity: 1;
                 visibility: visible;
             }
-
         </style>
     </head>
     <body>
+        <div id="header">
+            <h1 style="text-align: center">Chào mừng bạn đến với khóa học coursera FPTU</h1>
+            <h2> vui lòng đăng ký tài khoản để truy cập</h2>;
+        </div>
+        
+        
+        <hr />
         <div id="overlay" onclick="closeAll()"></div>
 
         <a data-click-key="login" data-click-value='{"href":"login.jsp"}'>
@@ -193,6 +200,17 @@
                 document.getElementById("registerModal").classList.remove("active");
             }
         </script>
+        
+        
+        <div id="tailer">
+            <p><span class="inf">
+                Liên Hệ:
+                </span>0******9</p>
+            <p><span class="inf">
+                <a href="mailto:lonhkim85@gmail.com?subject=phản hồi từ web&body=Xin chào, tôi muốn liên hệ bạn để đăng ký khóa học">Gửi mail</a>
+                   </span>
+        </div>
+        
     </body>
 </html>
 
