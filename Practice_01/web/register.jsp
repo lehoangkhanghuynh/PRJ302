@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Jan 8, 2026, 4:55:05 PM
+    Document   : register
+    Created on : Jan 9, 2026, 12:50:27 PM
     Author     : USER
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tap Doan Tien Bo</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <a href="login.jsp"> Login </a>
+        <h1>Đăng Ký tài khoản</h1>
     </body>
 </html>

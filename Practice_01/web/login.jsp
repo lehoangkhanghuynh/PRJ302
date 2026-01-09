@@ -1,6 +1,6 @@
 <%-- 
     Document   : login
-    Created on : Jan 8, 2026, 4:55:52 PM
+    Created on : Jan 9, 2026, 12:05:59 PM
     Author     : USER
 --%>
 
@@ -12,11 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="MainController" method="post" >
-            <h1>Trang Dang nhap</h1>
-            UserName: <input type="text" name="UserName">
-            PassWord: <input type="password" name="PassWord">
-            <input type="submit" value="Submit">
+        
         </form>
         <%
             String error = (String) request.getAttribute("error");

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Jan 8, 2026, 4:55:05 PM
+    Document   : danhap
+    Created on : Jan 9, 2026, 12:14:49 PM
     Author     : USER
 --%>
 
@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tap Doan Tien Bo</title>
+        <title>Trang chủ</title>
     </head>
     <body>
-        <a href="login.jsp"> Login </a>
+        <h1>Hello World!</h1>
     </body>
 </html>
