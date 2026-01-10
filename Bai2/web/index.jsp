@@ -10,6 +10,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            .cheamme a{
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 500;
+                color: red;
+            }
+            .cheamme a{
+                display: flex;
+                flex-flow: column;
+                gap: 20px;
+            }
+            </style>
     </head>
     <body>
         <h1>Hello World!</h1>
@@ -26,5 +39,10 @@
         <dl>
             <dt></dt>
         </dl>
+        <nav class="cheamme" >
+            <a href="#">Trang chủ</a>
+            <a href="#">Trang Nhị</a>
+            <a href="#">Trang Tam</a>
+        </nav>
     </body>
 </html>

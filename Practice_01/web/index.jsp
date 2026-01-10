@@ -70,7 +70,10 @@
                 color: #ff6600;
                 font-weight: bold;
             }
-
+            .laguage {
+                cursor: pointer;
+                color: #ff6600;
+            }
             /* Main Header */
             #main-header {
                 background-color: white;
@@ -324,6 +327,35 @@
                     width: 180px;
                 }
             }
+            /* Nút scroll to top test*/
+            #scrollToTop {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                background-color: #ff6600;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                font-size: 24px;
+                cursor: pointer;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 997;
+            }
+
+            #scrollToTop.show {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            #scrollToTop:hover {
+                background-color: #ff8800;
+                transform: translateY(-5px);
+            }
         </style>
     </head>
     <body>
@@ -342,7 +374,7 @@
             <div class="container">
                 <div class="logo">
                     <img src="images/banner-png2.webp" alt="FPT Education">
-                    <span>Khóa Học FPT</span>
+                    <span>FPT Course</span>
                 </div>
                 <nav class="main-nav">
                     <a href="#">Khóa học</a>
@@ -401,7 +433,10 @@
             </form>
             <button class="modal-close-btn" onclick="closeRegister()">Đóng</button>
         </div>
-
+        <!-- Nút scroll to top -->
+        <button id="scrollToTop" onclick="scrollToTop()">
+            ↑
+        </button>
         <script>
             window.onload = function () {
                 var registerMsg = document.getElementById("registerMessage");
@@ -410,6 +445,16 @@
                 openRegister();
             <% }%>
             }
+
+// Tách riêng window.onscroll
+            window.onscroll = function () {
+                var scrollBtn = document.getElementById("scrollToTop");
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollBtn.classList.add("show");
+                } else {
+                    scrollBtn.classList.remove("show");
+                }
+            };
 
             function showOverlay() {
                 document.getElementById("overlay").classList.add("active");
@@ -444,13 +489,27 @@
             function closeRegister() {
                 document.getElementById("registerModal").classList.remove("active");
             }
+            // code test thôi nhé 
+            window.onload = function () {
+                var registerMsg = document.getElementById("registerMessage");
+            <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
+                registerMsg.style.display = "block";
+                openRegister();
+            <% }%>
+            }
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         </script>
 
         <div id="tailer">
             <p><span class="inf">Liên Hệ:</span> 0******9</p>
             <p><span class="inf">Mail: 
-                <a class="text-red" href="mailto:lonhkim85@gmail.com?subject=phản hồi từ web&body=Xin chào, tôi muốn liên hệ bạn để đăng ký khóa học">Gửi mail</a>
-            </span></p>
+                    <a class="text-red" href="mailto:lonhkim85@gmail.com?subject=phản hồi từ web&body=Xin chào, tôi muốn liên hệ bạn để đăng ký khóa học">Gửi mail</a>
+                </span></p>
             <h4 class="contribute">Tài trợ bởi</h4>
             <p class="supporter">Lê Hoàng Khang</p>
             <p class="supporter">Trần Lê PU</p>
