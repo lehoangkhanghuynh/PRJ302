@@ -40,9 +40,9 @@
             }
 
             .search-box input {
-                padding: 8px 15px;
+                padding: 5px 15px;
                 border: 1px solid #ccc;
-                border-radius: 4px;
+                border-radius: 12px;
                 width: 250px;
             }
 
@@ -61,7 +61,7 @@
             }
             /* Main Header */
             #main-header {
-                background-color: white;
+                background-color: #FF6633;
                 padding: 15px 0;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             }
@@ -310,6 +310,8 @@
 
                 .search-box input {
                     width: 180px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
                 }
             }
             /* Nút scroll to top test*/
@@ -341,6 +343,7 @@
                 background-color: #ff8800;
                 transform: translateY(-5px);
             }
+
         </style>
     </head>
     <body>
@@ -366,7 +369,7 @@
                     <a href="#">Forums</a>
                     <a href="#">Learning Progess</a>
                     <a href="#">Danh mục khóa học</a>
-                    <a href="#">Liên hệ</a>
+                    <a href="#">Contact</a>
                 </nav>
                 <div class="auth-buttons">
                     <button class="btn btn-login" onclick="openLogin()">
@@ -380,7 +383,7 @@
         </div>
 
         <div class="banner">
-            <img src="images/banner-jpg2.jpg" alt="FPT banner" class="banner-img">
+            <img src="images/banner-png3.png" alt="FPT banner" class="banner-img">
         </div>
 
         <div id="overlay" onclick="closeAll()"></div>
@@ -433,70 +436,71 @@
         </button>
         <script>
             window.onload = function () {
-                    // Hiển thị register message nếu có
-                    var registerMsg = document.getElementById("registerMessage");
-                    <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
-            registerMsg.style.display = "block";
-            openRegister();
-                    <% } %>
+                // Hiển thị register message nếu có
+                var registerMsg = document.getElementById("registerMessage");
+            <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
+                registerMsg.style.display = "block";
+                openRegister();
+            <% } %>
 
-            // Hiển thị login message nếu có
-            var loginMsg = document.getElementById("loginMessage");
-                    <% if (request.getAttribute("errorLogin") != null) { %>
-            loginMsg.style.display = "block";
-            openLogin();
-                    <% }%>
-                }
-                        // Tách riêng window.onscroll
-                        window.onscroll = function () {                     var scrollBtn = document.getElementById("scrollToTop");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollBtn.classList.add("show");
-            } else {
-            scrollBtn.classList.remove("show");
+                // Hiển thị login message nếu có
+                var loginMsg = document.getElementById("loginMessage");
+            <% if (request.getAttribute("errorLogin") != null) { %>
+                loginMsg.style.display = "block";
+                openLogin();
+            <% }%>
             }
-                };
-                
-                        function showOverlay() {
-                    document.getElementById("overlay").classList.add("active");
+            // Tách riêng window.onscroll
+            window.onscroll = function () {
+                var scrollBtn = document.getElementById("scrollToTop");
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollBtn.classList.add("show");
+                } else {
+                    scrollBtn.classList.remove("show");
                 }
-                
-                        function hideOverlay() {
-                    document.getElementById("overlay").classList.remove("active");
-                }
-                
-                function closeAll() {
-                        closeLogin();
-            closeRegister();
-            hideOverlay();
-                }
-                
-                function openLogin() {
-                        closeRegister();
-            showOverlay();
-            document.getElementById("loginModal").classList.add("active");
-                }
-                
-                function closeLogin() {
-                        document.getElementById("loginModal").classList.remove("active");
-                }
-                
-                function openRegister() {
-                    closeLogin();
-                        showOverlay();
-            document.getElementById("registerModal").classList.add("active");
-                }
-                
+            };
+
+            function showOverlay() {
+                document.getElementById("overlay").classList.add("active");
+            }
+
+            function hideOverlay() {
+                document.getElementById("overlay").classList.remove("active");
+            }
+
+            function closeAll() {
+                closeLogin();
+                closeRegister();
+                hideOverlay();
+            }
+
+            function openLogin() {
+                closeRegister();
+                showOverlay();
+                document.getElementById("loginModal").classList.add("active");
+            }
+
+            function closeLogin() {
+                document.getElementById("loginModal").classList.remove("active");
+            }
+
+            function openRegister() {
+                closeLogin();
+                showOverlay();
+                document.getElementById("registerModal").classList.add("active");
+            }
+
             function closeRegister() {
-                        document.getElementById("registerModal").classList.remove("active");
-                }
-                
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                            behavior: 'smooth'
-                    });
-                }
-</script>
+                document.getElementById("registerModal").classList.remove("active");
+            }
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
 
         <div id="tailer">
             <p><span class="inf">Liên Hệ:</span> 0******9</p>
@@ -507,6 +511,9 @@
             <p class="supporter">Lê Hoàng Khang</p>
             <p class="supporter">Trần Lê PU</p>
             <p class="supporter">Nguyễn Huyền Diệu</p>
+        </div>
+        <div class="cards-grid">
+            <h1>title</h1>
         </div>
     </body>
 </html>
