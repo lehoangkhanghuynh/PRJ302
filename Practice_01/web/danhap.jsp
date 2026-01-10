@@ -35,8 +35,8 @@
             }
             .search-box input{
                 padding: 8px 15px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
+                border: 1px solid #ffffff;
+                border-radius: 30px;
                 width: 250px;
             }
             .logo {
@@ -127,6 +127,17 @@
                 padding: 15px;
                 align-content: center;
             }
+            .provider {
+                padding: 4px;
+                align-content: center;
+                justify-content: space-between;
+            }
+            .card-content {
+                
+            }
+            .provider-name {
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
@@ -161,7 +172,7 @@
                     <img src="images/banner-png2.webp" alt="FPT Education">
                     <span>FPT Course</span>
                     <nav class="main-nav">
-                        <a href="#">Course</a>
+                        <a href="#">Courses</a>
                         <a href="#">Learning Progress</a>
                         <a href="#">Forums</a>
                     </nav>
@@ -172,9 +183,22 @@
     <div class="container">
     <div class="header-center">
         <h1>Courses</h1>
-        
     </div>
     </div>
+    <hr />
+    <div class="cards-grid">
+            <!-- Deep Learning Card -->
+            <a href="#" target="_blank" class="card">
+                <div class="card-image deep-learning">
+                    <span>Deep Learning<br>Specialization</span>
+                </div>
+                <div class="card-content">
+                    <div class="provider">
+                        <image atl="Code web" src="images/course-web01.jpg">
+                        </div>
+                        <span class="provider-name">Code Web</span>
+                </div>
+            </a>
 </body>
 
 </html>
