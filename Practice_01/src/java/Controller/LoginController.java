@@ -43,10 +43,10 @@ public class LoginController extends HttpServlet {
             String username = request.getParameter("UserName");
             String password = request.getParameter("PassWord");
             if (username.equals("admin") && password.equals("admin")) {
-                url = "danhap.jsp"; //đã đăng nhập
+                url = "danhap.jsp";
             } else{
-            request.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu!");
-                url = "login.jsp"; //thất bại login lại
+            request.setAttribute("errorLogin", "Sai tên đăng nhập hoặc mật khẩu!");
+            url = "index.jsp";
             }
             } catch (Exception e) {
                 out.print("have wrong");

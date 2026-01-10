@@ -46,21 +46,6 @@
                 width: 250px;
             }
 
-            .campus-links {
-                display: flex;
-                gap: 20px;
-            }
-
-            .campus-links a {
-                text-decoration: none;
-                color: #333;
-                font-size: 14px;
-            }
-
-            .campus-links a:hover {
-                color: #ff6600;
-            }
-
             .language {
                 font-size: 14px;
                 color: #333;
@@ -260,14 +245,14 @@
             }
 
             /* Thông báo lỗi/thành công */
-            #registerMessage {
+            #registerMessage, #loginMessage {
                 border-radius: 8px;
                 padding: 12px;
                 margin-bottom: 15px;
                 text-align: center;
             }
 
-            #registerMessage span {
+            #registerMessage span, #loginMessage span {
                 font-size: 14px;
                 font-weight: 500;
             }
@@ -403,6 +388,15 @@
         <!-- Modal đăng nhập -->
         <div id="loginModal">
             <h3>Đăng Nhập</h3>
+            <div id="loginMessage" style="display: none;">
+                <%
+                    String logmsg = (String) request.getAttribute("errorLogin");
+                    if (logmsg != null) {
+                %>
+                <span style="color: #e74c3c;"><%= logmsg%></span>
+                <% } %>
+            </div>
+
             <form action="LoginController" method="post">
                 <input type="text" name="UserName" placeholder="Tên đăng nhập" required>
                 <input type="password" name="PassWord" placeholder="Mật khẩu" required>
@@ -439,74 +433,70 @@
         </button>
         <script>
             window.onload = function () {
-                var registerMsg = document.getElementById("registerMessage");
-            <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
-                registerMsg.style.display = "block";
-                openRegister();
-            <% }%>
-            }
-            window.onload() = function (){
-                var loginMsg = document.getElementById("loginMessgage")
-            }
-                
-// Tách riêng window.onscroll
-            window.onscroll = function () {
-                var scrollBtn = document.getElementById("scrollToTop");
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    scrollBtn.classList.add("show");
-                } else {
-                    scrollBtn.classList.remove("show");
+                    // Hiển thị register message nếu có
+                    var registerMsg = document.getElementById("registerMessage");
+                    <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
+            registerMsg.style.display = "block";
+            openRegister();
+                    <% } %>
+
+            // Hiển thị login message nếu có
+            var loginMsg = document.getElementById("loginMessage");
+                    <% if (request.getAttribute("errorLogin") != null) { %>
+            loginMsg.style.display = "block";
+            openLogin();
+                    <% }%>
                 }
-            };
-
-            function showOverlay() {
-                document.getElementById("overlay").classList.add("active");
+                        // Tách riêng window.onscroll
+                        window.onscroll = function () {                     var scrollBtn = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.classList.add("show");
+            } else {
+            scrollBtn.classList.remove("show");
             }
-
-            function hideOverlay() {
-                document.getElementById("overlay").classList.remove("active");
-            }
-
-            function closeAll() {
-                closeLogin();
-                closeRegister();
-                hideOverlay();
-            }
-
-            function openLogin() {
-                closeRegister();
-                showOverlay();
-                document.getElementById("loginModal").classList.add("active");
-            }
-
-            function closeLogin() {
-                document.getElementById("loginModal").classList.remove("active");
-            }
-
-            function openRegister() {
-                closeLogin();
-                showOverlay();
-                document.getElementById("registerModal").classList.add("active");
-            }
-
+                };
+                
+                        function showOverlay() {
+                    document.getElementById("overlay").classList.add("active");
+                }
+                
+                        function hideOverlay() {
+                    document.getElementById("overlay").classList.remove("active");
+                }
+                
+                function closeAll() {
+                        closeLogin();
+            closeRegister();
+            hideOverlay();
+                }
+                
+                function openLogin() {
+                        closeRegister();
+            showOverlay();
+            document.getElementById("loginModal").classList.add("active");
+                }
+                
+                function closeLogin() {
+                        document.getElementById("loginModal").classList.remove("active");
+                }
+                
+                function openRegister() {
+                    closeLogin();
+                        showOverlay();
+            document.getElementById("registerModal").classList.add("active");
+                }
+                
             function closeRegister() {
-                document.getElementById("registerModal").classList.remove("active");
-            }
-            // code test thôi nhé 
-            window.onload = function () {
-                var registerMsg = document.getElementById("registerMessage");
-            <% if (request.getAttribute("errorMessage") != null || request.getAttribute("successMessage") != null) { %>
-                registerMsg.style.display = "block";
-                openRegister();
-            <% }%>
-            }
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        </script>
+                        document.getElementById("registerModal").classList.remove("active");
+                }
+                
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                            behavior: 'smooth'
+                    });
+                }
+</script>
 
         <div id="tailer">
             <p><span class="inf">Liên Hệ:</span> 0******9</p>
