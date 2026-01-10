@@ -377,9 +377,9 @@
                     <span>FPT Course</span>
                 </div>
                 <nav class="main-nav">
-                    <a href="#">Khóa học</a>
-                    <a href="#">Diễn đàn</a>
-                    <a href="#">Tiến trình học</a>
+                    <a href="#">Course</a>
+                    <a href="#">Forums</a>
+                    <a href="#">Learning Progess</a>
                     <a href="#">Danh mục khóa học</a>
                     <a href="#">Liên hệ</a>
                 </nav>
@@ -445,7 +445,10 @@
                 openRegister();
             <% }%>
             }
-
+            window.onload() = function (){
+                var loginMsg = document.getElementById("loginMessgage")
+            }
+                
 // Tách riêng window.onscroll
             window.onscroll = function () {
                 var scrollBtn = document.getElementById("scrollToTop");
