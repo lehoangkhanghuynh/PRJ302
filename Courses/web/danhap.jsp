@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Trang chủ</title>
+        <link rel="icon" href="images/favicon.png" type="image/png">
         <style>
             * {
                 margin: 0;
@@ -270,10 +271,19 @@
                 display: flex;
             }
             .card-grid {
-                
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
             }
             .card{
-              
+              background: white;
+              overflow: hidden;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+              transition: transform 0.3s, box-shadow 0.3s;
+              cursor: pointer;
+              color: inherit;
+              text-decoration: none;
+              display: block;
             }
         </style>
     </head>

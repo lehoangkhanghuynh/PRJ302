@@ -361,7 +361,7 @@
         <div id="main-header">
             <div class="container">
                 <div class="logo">
-                    <img src="images/banner-png2.webp" alt="FPT Education">
+                    <img src="images/fptulogo.jpg" alt="FPT Education">
                     <span>FPT Course</span>
                 </div>
                 <nav class="main-nav">
