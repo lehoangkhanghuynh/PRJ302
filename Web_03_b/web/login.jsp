@@ -14,15 +14,19 @@
     <body>
         <form action="MainController" method="post" >
             <h1>Trang Dang nhap</h1>
-            <label name="UserName">UserName: </label>
+            <label for=UserName">UserName: </label>
             <input type="text" name="UserName">
-            <label name="PassWord">PassWord:</label> 
+            <label for="PassWord">PassWord:</label> 
             <input type="password" name="PassWord">
             <input type="submit" value="Submit">
         </form>
         <%
-            String message = request.getAttribute("message")+"";
-            message = (message.equals("message")?null:message);
+            String message = (String) request.getAttribute("messages");
+            if (message != null) {
         %>
+        <span style="color: red"><%=message%> </span>
+        <% }
+        %>
+
     </body>
 </html>

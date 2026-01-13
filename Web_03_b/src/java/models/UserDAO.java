@@ -24,7 +24,7 @@ public class UserDAO {
         UserDTO user = null;
         try {
         Connection conn = DbUtils.getConnection();
-        String sql = "SELEC * FROM tblUsers WHERE userID='"+id+"'";
+        String sql = "SELECT * FROM tblUsers WHERE userID='"+id+"'";
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery(sql);
         
