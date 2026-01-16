@@ -377,6 +377,14 @@
                 </div>
                 <div class="card-content">
                     <div class="provider">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <circle cx="12" cy="12" r="12" fill="#FF6C00"/>
+                        <g fill="#FFFFFF">
+                        <path d="M 5 8 L 5 16 L 6.2 16 L 6.2 12.5 L 8.5 12.5 L 8.5 11.5 L 6.2 11.5 L 6.2 9 L 9 9 L 9 8 Z"/>
+                        <path d="M 10 8 L 10 16 L 11.2 16 L 11.2 12.5 L 13 12.5 C 13.8 12.5 14.3 12 14.3 11.2 L 14.3 9.3 C 14.3 8.5 13.8 8 13 8 Z M 11.2 9 L 13 9 C 13.2 9 13.3 9.1 13.3 9.3 L 13.3 11.2 C 13.3 11.4 13.2 11.5 13 11.5 L 11.2 11.5 Z"/>
+                        <path d="M 15 8 L 15 9 L 16.5 9 L 16.5 16 L 17.7 16 L 17.7 9 L 19.2 9 L 19.2 8 Z"/>
+                        </g>
+                        </svg>
                         <span class="provider-name">AI</span>
                     </div>
                     <h2 class="card-title">Python</h2>
@@ -392,9 +400,39 @@
                 </div>
                 <div class="card-content">
                     <div class="provider">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <circle cx="12" cy="12" r="12" fill="#FF6C00"/>
+                        <g fill="#FFFFFF">
+                        <path d="M 5 8 L 5 16 L 6.2 16 L 6.2 12.5 L 8.5 12.5 L 8.5 11.5 L 6.2 11.5 L 6.2 9 L 9 9 L 9 8 Z"/>
+                        <path d="M 10 8 L 10 16 L 11.2 16 L 11.2 12.5 L 13 12.5 C 13.8 12.5 14.3 12 14.3 11.2 L 14.3 9.3 C 14.3 8.5 13.8 8 13 8 Z M 11.2 9 L 13 9 C 13.2 9 13.3 9.1 13.3 9.3 L 13.3 11.2 C 13.3 11.4 13.2 11.5 13 11.5 L 11.2 11.5 Z"/>
+                        <path d="M 15 8 L 15 9 L 16.5 9 L 16.5 16 L 17.7 16 L 17.7 9 L 19.2 9 L 19.2 8 Z"/>
+                        </g>
+                        </svg>
                         <span class="provider-name">SE</span>
                     </div>
                     <h2 class="card-title">Lập trình nhúng</h2>
+                    <p class="card-type">Professional Certificate</p>
+                </div>
+            </a>
+           <a href="" target="_blank" class="card">
+                <div class="card-image">
+                    <img src="banner-png2.png" loading="lazy">
+                    <div class="skills-badge">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="provider">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <circle cx="12" cy="12" r="12" fill="#FF6C00"/>
+                        <g fill="#FFFFFF">
+                        <path d="M 5 8 L 5 16 L 6.2 16 L 6.2 12.5 L 8.5 12.5 L 8.5 11.5 L 6.2 11.5 L 6.2 9 L 9 9 L 9 8 Z"/>
+                        <path d="M 10 8 L 10 16 L 11.2 16 L 11.2 12.5 L 13 12.5 C 13.8 12.5 14.3 12 14.3 11.2 L 14.3 9.3 C 14.3 8.5 13.8 8 13 8 Z M 11.2 9 L 13 9 C 13.2 9 13.3 9.1 13.3 9.3 L 13.3 11.2 C 13.3 11.4 13.2 11.5 13 11.5 L 11.2 11.5 Z"/>
+                        <path d="M 15 8 L 15 9 L 16.5 9 L 16.5 16 L 17.7 16 L 17.7 9 L 19.2 9 L 19.2 8 Z"/>
+                        </g>
+                        </svg>
+                        <span class="provider-name">C#</span>
+                    </div>
+                    <h2 class="card-title">Thuật Toán</h2>
                     <p class="card-type">Professional Certificate</p>
                 </div>
             </a>

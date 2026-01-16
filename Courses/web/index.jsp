@@ -513,7 +513,7 @@
             <p class="supporter">Nguyễn Huyền Diệu</p>
         </div>
         <div class="cards-grid">
-            <h1>title</h1>
+            <h1></h1>
         </div>
     </body>
 </html>
